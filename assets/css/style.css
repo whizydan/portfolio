@@ -1188,3 +1188,30 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+.feature-box {
+  background-color: #3e3d3d;
+  border: 1px solid rgba(221, 221, 221, 0);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box h4 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #50b3a2;
+}
+
+.feature-box p {
+  font-size: 1em;
+  color: #aca9a9;
+  line-height: 1.6;
+}
