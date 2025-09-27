@@ -2,16 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
     Search,
-    Filter,
-    ExternalLink,
     Github,
     ArrowRight,
     Eye,
@@ -21,13 +18,12 @@ import {
     Cpu,
     Zap,
     Star,
-    Heart,
     Calendar,
-    Users,
     ArrowUpRight,
     Play
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function ProjectsPage() {
     const [activeCategory, setActiveCategory] = useState("all");
@@ -50,115 +46,115 @@ export default function ProjectsPage() {
     const projects = [
         {
             id: 1,
-            title: "E-Commerce Platform",
+            title: "Stellar MarketPlace Ecommerce Website",
             description: "Full-stack e-commerce solution with modern UI, real-time inventory management, and secure payment integration.",
             category: "web",
-            image: "/api/placeholder/600/400",
-            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+            image: "/projects/stellar-marketplace.png",
+            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MySQL"],
             status: "completed",
             featured: true,
-            githubUrl: "https://github.com/whizydan/ecommerce-platform",
-            liveUrl: "https://ecommerce-demo.vercel.app",
-            year: "2024",
+            githubUrl: "",
+            liveUrl: "https://stellarmarketplacekenya.com",
+            year: "2025",
             highlights: ["Real-time analytics", "Payment integration", "Admin dashboard"]
         },
         {
             id: 2,
-            title: "Fitness Tracker Mobile App",
-            description: "Cross-platform fitness application with workout plans, progress tracking, and social features.",
+            title: "Budget Tracker Mobile App",
+            description: "Cross-platform finance application with AI recommendation, progress tracking, and social features.",
             category: "mobile",
             image: "/api/placeholder/600/400",
             technologies: ["Flutter", "Dart", "Firebase", "Node.js"],
             status: "completed",
             featured: true,
-            githubUrl: "https://github.com/whizydan/fitness-tracker",
-            liveUrl: "https://play.google.com/store/apps/details?id=com.whizydan.fitness",
+            githubUrl: "https://github.com/whizydan/budget-tracking-flutter-app",
+            liveUrl: "https://github.com/whizydan/budget-tracking-flutter-app",
             year: "2024",
-            highlights: ["Cross-platform", "Real-time sync", "Social features"]
+            highlights: ["Cross-platform", "Real-time sync", "Artificial Intelligence", "Social features", ]
         },
         {
             id: 3,
-            title: "Smart Home IoT System",
-            description: "IoT-based home automation system with mobile control, sensors, and energy monitoring.",
-            category: "iot",
-            image: "/api/placeholder/600/400",
+            title: "Wellness Project Wordpress",
+            description: "Wordpress based wellness and organic product store front",
+            category: "web",
+            image: "/projects/wellness-u.png",
             technologies: ["Arduino", "React Native", "Node.js", "MQTT"],
             status: "in-progress",
             featured: true,
-            githubUrl: "https://github.com/whizydan/smart-home-iot",
-            liveUrl: null,
+            githubUrl: "",
+            liveUrl: "https://wellness-u.com",
             year: "2024",
-            highlights: ["Real-time control", "Energy monitoring", "Mobile app"]
+            highlights: ["Wordpress", "Energy monitoring", "Mobile app"]
         },
         {
             id: 4,
-            title: "Project Management Dashboard",
+            title: "Job Listings Platform",
             description: "Collaborative project management tool with task tracking, team collaboration, and analytics.",
             category: "web",
-            image: "/api/placeholder/600/400",
-            technologies: ["React", "TypeScript", "Python", "PostgreSQL"],
+            image: "/projects/werra-jobs.png",
+            technologies: ["React", "TypeScript", "NextJS", "MySQL"],
             status: "completed",
             featured: false,
-            githubUrl: "https://github.com/whizydan/project-dashboard",
-            liveUrl: "https://project-mgmt.vercel.app",
+            githubUrl: "",
+            liveUrl: "https://werra.vercel.app/",
             year: "2023",
             highlights: ["Team collaboration", "Real-time updates", "Analytics"]
         },
         {
             id: 5,
-            title: "Food Delivery App",
-            description: "Mobile application for food delivery with real-time tracking, reviews, and payment system.",
+            title: "Flutter Fitness UI",
+            description: "Mobile application for fitness with real-time tracking, reviews, and recommendation system.",
             category: "mobile",
             image: "/api/placeholder/600/400",
-            technologies: ["Flutter", "Dart", "Firebase", "Stripe"],
+            technologies: ["Flutter", "Dart", "Firebase"],
             status: "completed",
             featured: false,
-            githubUrl: "https://github.com/whizydan/food-delivery-app",
-            liveUrl: "https://apps.apple.com/app/food-delivery",
+            githubUrl: "https://github.com/whizydan/flex/",
+            liveUrl: "https://github.com/whizydan/flex/",
             year: "2023",
             highlights: ["Real-time tracking", "Payment system", "Reviews"]
         },
         {
             id: 6,
-            title: "Weather Station Arduino",
+            title: "Disaster Alert and Management",
             description: "Arduino-based weather monitoring system with web dashboard and data logging.",
             category: "iot",
             image: "/api/placeholder/600/400",
             technologies: ["Arduino", "C++", "React", "WebSocket"],
             status: "completed",
             featured: false,
-            githubUrl: "https://github.com/whizydan/weather-station",
-            liveUrl: "https://weather-station-demo.vercel.app",
+            githubUrl: "",
+            liveUrl: "https://disaster-alert-fawn.vercel.app/",
             year: "2023",
             highlights: ["Real-time data", "Web dashboard", "Data logging"]
         },
         {
             id: 7,
-            title: "Portfolio Website",
-            description: "Modern portfolio website with animations, dark mode, and project showcase.",
+            title: "ASP .NET Wellness Website",
+            description: "Modern wellness website in ASP .NET and backend using ExpressJS.",
             category: "web",
             image: "/api/placeholder/600/400",
-            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+            technologies: ["ExpressJS", "ASP .NET", "bootstrap", "SQL"],
             status: "completed",
             featured: false,
-            githubUrl: "https://github.com/whizydan/portfolio",
-            liveUrl: "https://whizydan.vercel.app",
+            githubUrl: "https://github.com/whizydan/Wellness_Centre",
+            liveUrl: "https://github.com/whizydan/Wellness_Centre",
             year: "2023",
             highlights: ["Dark mode", "Animations", "Responsive"]
         },
         {
             id: 8,
-            title: "Chat Application",
-            description: "Real-time chat application with rooms, file sharing, and user authentication.",
+            title: "ASP .NET Core Ecommerce Website",
+            description: "ASP .NET CORE ecommerce web app to sell and buy fruits",
             category: "web",
             image: "/api/placeholder/600/400",
-            technologies: ["React", "Socket.io", "Node.js", "MongoDB"],
+            technologies: ["XSLT", "MySQL", "XML", "ORM"],
             status: "completed",
             featured: false,
-            githubUrl: "https://github.com/whizydan/chat-app",
-            liveUrl: "https://chat-demo.vercel.app",
+            githubUrl: "https://github.com/whizydan/GoFruity",
+            liveUrl: "https://github.com/whizydan/GoFruity",
             year: "2023",
-            highlights: ["Real-time messaging", "File sharing", "Rooms"]
+            highlights: ["checkout", "XSLT transform", "csharp"]
         }
     ];
 
@@ -187,7 +183,7 @@ export default function ProjectsPage() {
 
             <div className="relative aspect-video overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                    <Globe className="h-20 w-20 text-primary/20" />
+                    <Image height={800} width={400} alt={`${project.title} screenshot`} src={project.image} className="text-primary/20" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
