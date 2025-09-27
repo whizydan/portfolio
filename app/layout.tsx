@@ -3,6 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { BackgroundEffects } from "@/components/background-effects";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,19 +66,40 @@ export const metadata: Metadata = {
   applicationName: "Whizydan's Portfolio",
 };
 
-export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
       <body
-          className={`${geistSans.className} ${geistMono.className} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen bg-background text-foreground`}
       >
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <div className="relative flex min-h-screen flex-col">
+          {/* Background Effects */}
+          <BackgroundEffects />
+
+          {/* Navigation */}
+          <Navigation />
+
+          {/* Main Content */}
+          <main className="flex-1 relative z-10">
+            {children}
+          </main>
+
+          {/* Footer */}
+          <Footer />
+        </div>
+
+        {/* Toast Notifications */}
+        <Toaster />
+      </ThemeProvider>
+
+      {/* Vercel Analytics */}
       <Analytics />
       <SpeedInsights />
-      {children}
       </body>
       </html>
   );
