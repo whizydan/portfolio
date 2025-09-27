@@ -32,7 +32,7 @@ export function Footer() {
                             </Link>
                         </Button>
                         <Button variant="ghost" size="icon" asChild>
-                            <Link href="mailto:whizydan@example.com">
+                            <Link href="mailto:whizydan@gmail.com">
                                 <Mail className="h-4 w-4" />
                             </Link>
                         </Button>
