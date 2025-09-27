@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.json",
   themeColor: "#ffffff",
   applicationName: "Whizydan's Portfolio",
 };
