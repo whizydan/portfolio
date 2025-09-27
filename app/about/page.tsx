@@ -42,7 +42,8 @@ export default function AboutPage() {
             { name: "React", level: 90, icon: "⚛️" },
             { name: "TypeScript", level: 85, icon: "🔷" },
             { name: "Tailwind CSS", level: 88, icon: "🎨" },
-            { name: "vite", level: 92, icon: "⚛️"}
+            { name: "vite", level: 92, icon: "⚛️"},
+            { name: "Wordpress", level: 98, icon: "🎨"}
         ],
         mobile: [
             { name: "Flutter", level: 82, icon: "📱" },
@@ -67,25 +68,32 @@ export default function AboutPage() {
 
     const experience = [
         {
-            year: "2022 - Present",
+            year: "2024 - Present",
+            role: "Web Developer",
+            company: "Taskweavers LTD",
+            description: "Part-time Software Developer, contributed to the design, development, and maintenance of software solutions across web, mobile, and desktop platforms",
+            technologies: ["Next.js", "React", "Wordpress", "TypeScript"],
+        },
+        {
+            year: "2023 - 2024",
+            role: "Wordpress Developer Intern",
+            company: "Samson's Safaris LTD",
+            description: "Worked in the IT department as developer and maintenance for record keeping, payment gateway, SEO optimization, tech infrastructure and the company websites.",
+            technologies: ["Wordpress", "PHP"],
+        },
+        {
+            year: "2023 - 2023",
+            role: "IT Attachment",
+            company: "Mabati Technical Training Institute",
+            description: "Collaborated with the IT department to manage student records on cloud platforms, configure networks and access points, troubleshoot technical equipment, and maintain software solutions",
+            technologies: ["Networking", "HTML5"],
+        },
+        {
+            year: "2022 - 2025",
             role: "Full Stack Developer",
-            company: "Freelance",
-            description: "Building modern web and mobile applications for clients worldwide. Specialized in React, Next.js, and Flutter development.",
-            technologies: ["Next.js", "React", "Flutter", "TypeScript"],
-        },
-        {
-            year: "2021 - 2022",
-            role: "Mobile Developer",
-            company: "Tech Solutions Ltd",
-            description: "Developed cross-platform mobile applications using Flutter and contributed to backend APIs with Node.js.",
-            technologies: ["Flutter", "Dart", "Node.js", "MongoDB"],
-        },
-        {
-            year: "2020 - 2021",
-            role: "Junior Web Developer",
-            company: "Digital Agency",
-            description: "Started my professional journey building responsive websites and learning modern web technologies.",
-            technologies: ["React", "JavaScript", "CSS3", "HTML5"],
+            company: "Mbivu Tech",
+            description: "Part-time Remote Software Developer at Mbivu Tech – developed and maintained web, mobile, desktop, and Arduino-based applications, delivering functional and user centric solutions.",
+            technologies: ["React", "Flutter", "ASP .NET", "Java/ Kotlin", "ExpressJS", "MySQL"],
         },
     ];
 
@@ -164,7 +172,7 @@ export default function AboutPage() {
                                 </Badge>
                                 <h2 className="text-3xl font-bold mb-4">Duncan &ldquo;Whizydan&ldquo; Developer</h2>
                                 <p className="text-muted-foreground leading-relaxed mb-4">
-                                    I&apos;m a passionate full-stack developer with over 3 years of experience
+                                    I&apos;m a passionate Web & Mobile developer with over 3 years of experience
                                     creating digital solutions that solve real-world problems. My journey
                                     started with curiosity and has evolved into a career I truly love.
                                 </p>
