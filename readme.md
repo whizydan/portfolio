@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Whizydan's Portfolio — Next.js 15
 
-## Getting Started
+This is a personal portfolio built with **Next.js 15**
 
-First, run the development server:
+## Features
+- Project gallery (cards + project detail pages)
+- About / Resume / Contact pages
+- Responsive, mobile-first design
+- SEO-ready (meta tags, Open Graph)
+- Image optimization using Next.js image handling
+- Accessibility basics (semantic HTML, keyboard focus)
+- Analytics (Vercel Analytics)
 
+## Tech stack
+- Next.js 15
+- React
+- Tailwind CSS
+- Shadcn
+- TypeScript
+
+## Quick start (local)
 ```bash
+# clone
+git clone https://github.com/whizydan/portfolio.git
+cd portfolio
+
+# install
+npm install
+# or
+yarn
+
+# development
 npm run dev
 # or
 yarn dev
+
+# build
+npm run build
+npm run start
 # or
-pnpm dev
-# or
-bun dev
+yarn build
+yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Recommended package.json scripts
+```json
+{
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
+  }
+}
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## SEO & social
+- Add dynamic Open Graph tags per page.
+- Provide a default og-image and dynamic images per project.
+- Add `robots.txt` and `sitemap.xml` (auto-generate on build or via server).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
+**Vercel (recommended)**:
+1. Push repo to GitHub/GitLab/Bitbucket.
+2. Import project on Vercel.
+3. Deploy — Vercel runs `npm run build`.
 
-## Learn More
+Other hosts: any Node host that supports Next.js like cpanel etc.
 
-To learn more about Next.js, take a look at the following resources:
+## Performance & accessibility tips
+- Use `next/image` for optimized images.
+- Use dynamic imports for large components.
+- Run Lighthouse and address issues.
+- Ensure proper contrast and keyboard accessibility.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Troubleshooting
+- `next dev` fails → check Node version (Node 22 recommended).
+- Images not optimizing → configure `next.config.js` domains.
+- Build fails on CI → ensure lint rules are followed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
+1. Fork the repo
+2. Create branch `feature/your-feature`
+3. Run `npm run lint` and `npm run build`
+4. Open a PR
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT © whizydan
